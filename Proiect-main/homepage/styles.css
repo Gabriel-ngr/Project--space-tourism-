@@ -1,0 +1,297 @@
+@import "../_variables.css";
+@import "../_globals.css";
+
+.homepage {
+    background-image: url('../assets/home/background-home-mobile.jpg');
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+body > main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .logo {
+    padding: var(--space-5);
+}
+
+header > .burger-menu {
+    padding: var(--space-5);
+}
+
+.burger-menu > .burger {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    margin: var(--space-3);
+}
+
+.subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    color: var(--color-mainWhite);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    text-align: center;
+    margin-top: var(--space-4);
+}
+
+.title {
+    font-family: 'Bellefair', serif;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: var(--space-4);
+}
+
+.description {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 200;
+    color: var(--color-mainWhite);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.cta-btn {
+    display: block;
+    font-family: 'Bellefair', serif;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.25px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-mainBlack);
+    margin-top: 80px;
+}
+
+.cta-btn:hover, .cta-btn:active, .cta-btn:focus {
+    box-shadow: rgba(255, 255, 255, 0.1036)0 0 0 50px;
+    transition: box-shadow 0.6 ease-in-out;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav > .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: var(--space-6);
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0 48px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+}
+
+.nav-item {
+    padding: 48px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-link > p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+}
+
+.nav-item > span {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .homepage {
+        background-image: url('../assets/home/background-home-tablet.jpg');
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    
+    .desktop-nav {
+        display: block;
+    }
+
+    .subtitle {
+        margin-top: 100px;
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    .title {
+        font-size: 150px;
+        line-height: 150px;
+        margin: 24px 0;
+    }
+
+    .description {
+        max-width: 444px;
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0;    
+    }
+
+    .cta-btn {
+        width: 242px;
+        height: 242px;
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-top: 156px;
+    }
+
+    .nav-item {
+        font-family: Barlow Condensed;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .homepage {
+        background-image: url('../assets/home/background-home-desktop.jpg');
+        background-attachment: fixed;
+    }
+
+    body > header {
+        padding: 20px 0px 20px 0;
+    }
+
+    .desktop-nav {
+        height: 96px;
+    }
+
+    .nav-list {
+        height: inherit;
+    }
+
+    .nav-item > span {
+        display: inline;
+        font-weight: 700;
+        font-family: Barlow Condensed, sans-serif;
+        font-size: 16px;
+        color: #fff;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .nav-item {
+        display: flex;
+        gap: 11px;
+        padding: 38px 0;
+    }
+
+    .nav-item > p {
+        font-family: Barlow Condensed;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .desktop-nav > .nav-list {
+        padding-right: 167px;
+        padding-left: 123px;
+    }
+
+    .horizontal-line {
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+        z-index: 100;
+        margin-left: 32px;
+        margin-right: -32px;
+    }    
+
+    body > main {
+        flex-direction: row;
+    }
+
+    .main-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .subtitle {
+        font-family: Barlow Condensed;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: 4.7px;   
+        color: #fff; 
+    }
+
+    .title {
+        color: #fff;
+        font-family: Bellefair;
+        font-size: 150px;
+        font-weight: 400;
+        line-height: 172px;
+    }
+
+    .description {
+        font-family: Barlow;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+}

@@ -1,0 +1,17 @@
+
+/* Spacings */
+:root {
+    --space-1: 2px;
+    --space-2: 4px;
+    --space-3: 8px;
+    --space-4: 16px;
+    --space-5: 32px;
+    --space-6: 64px;
+}
+
+/* colors */
+:root {
+    --color-paleWhite: #F2F2F2;
+    --color-mainWhite: #D0D6F9;
+    --color-mainBlack: #0B0D17;
+}
