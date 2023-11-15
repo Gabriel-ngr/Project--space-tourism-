@@ -150,6 +150,7 @@ header > .burger-menu {
     
     .homepage {
         background-image: url('../assets/home/background-home-tablet.jpg');
+        background-attachment: fixed;
     }
 
     .burger-menu {
@@ -261,6 +262,8 @@ header > .burger-menu {
 
     body > main {
         flex-direction: row;
+        justify-content: space-around;
+        margin-top: 230px;
     }
 
     .main-title {
@@ -293,5 +296,7 @@ header > .burger-menu {
         font-size: 18px;
         font-weight: 400;
         line-height: 32px;
+        text-align: left;
     }
+
 }
