@@ -1,0 +1,367 @@
+@import url('../_globals.css');
+@import url('../_variables.css');
+
+.homepage {
+    background-image: url('../assets/technology/background-technology-mobile.jpg');
+    background-attachment: fixed;
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+body > main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .logo {
+    padding: var(--space-5);
+}
+
+header > .burger-menu {
+    padding: var(--space-5);
+}
+
+.burger-menu > .burger {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    margin: var(--space-3);
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav > .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: var(--space-6);
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0 48px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+}
+
+.nav-item {
+    padding: 48px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-link > p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+}
+
+.nav-item > span {
+    display: none;
+}
+
+main > .space-launch {
+    font-family: Barlow Condensed , sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+}
+
+.space-launch span {
+    color: #535353;
+}
+
+main > .space-image {
+    height: 210px;
+    margin-top: var(--space-5);
+    display: block;
+}
+
+main > .list-item {
+    display: flex;
+    margin-top: var(--space-5);
+}
+
+main > .list-item a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.001);
+    border: 1px solid #7c7c7c;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 16px;
+}
+
+main > .list-item a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title > .subtitle {
+    font-family: Barlow Condensed , sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 2.36px;
+    text-align: center;
+    margin-top: var(--space-4);
+}
+
+.title {
+    font-family: Bellefair , sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 9px;
+}
+
+.description {
+    width: 327px;
+    height: 175px;
+    font-family: Barlow , sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.space-image,
+.portrait-image {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .homepage {
+        background-image: url('../assets/technology/background-technology-tablet.jpg');
+        background-attachment: fixed;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    
+    .desktop-nav {
+        display: block;
+    }
+
+    .space-launch {
+        width: 90%;
+        margin-top: var(--space-5);
+        font-family: Barlow Condensed , sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        text-align: left;
+    }
+
+    main > .space-image {
+        width: 100%;
+        height: 300px;
+        margin-top: var(--space-5);
+        display: block;
+    } 
+
+    main > .list-item a {
+        width: 60px;
+        height: 60px;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .main-title > .title {
+        width: 457px;
+        font-family: Bellefair;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .description {
+        width: 458px;
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .homepage {
+        background-image: url('../assets/technology/background-technology-desktop.jpg');
+        background-attachment: fixed;
+    }
+
+    body > header {
+        padding: 20px 0px 20px 0;
+    }
+
+    body > main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .desktop-nav {
+        height: 96px;
+    }
+
+    .nav-list {
+        height: inherit;
+    }
+
+    .nav-item > span {
+        display: inline;
+        font-weight: 700;
+        font-family: Barlow Condensed, sans-serif;
+        font-size: 16px;
+        color: #fff;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .nav-item {
+        display: flex;
+        gap: 11px;
+        padding: 38px 0;
+    }
+
+    .nav-item > p {
+        font-family: Barlow Condensed;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .desktop-nav > .nav-list {
+        padding-right: 167px;
+        padding-left: 123px;
+    }
+
+    .horizontal-line {
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+        z-index: 100;
+        margin-left: 32px;
+        margin-right: -32px;
+    }    
+
+    .space-launch {
+        width: 100%;
+        margin-left: 24px;
+    }
+
+    main > .list-item {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    main > .list-item a {
+        width: 80px;
+        height: 80px;
+    }
+    
+    main > .main-title {
+        width: 470px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main-title > .subtitle {
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        text-align: left;
+    }
+
+    .main-title > .title {
+        width: 470px;
+        font-family: Bellefair;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 64px;
+        letter-spacing: 0px;
+        text-align: start;
+    }
+
+    .main-title > .description {
+        width: 444px;
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+    }
+
+    main > .space-image {
+        display: none;
+    }
+
+    .portrait-image {
+        display: block;
+    }
+}
